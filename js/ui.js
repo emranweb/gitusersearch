@@ -93,7 +93,7 @@ class UI {
       resOutPut += `<div class="single">
   <div class="item">${a.name}</div>
   <div class="item">${a.language}</div>
-  <div class="item"><a href="${a.html_url} target="_blank">Repository Link</a></div>
+  <div class="item"><a href="${a.html_url}" target="_blank">Repository Link</a></div>
 </div>`
     })
 
