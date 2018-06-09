@@ -45,6 +45,7 @@ class UI {
   //clear the user data if the seach is blank
   removeUser() {
     document.querySelector(".user").innerHTML = "";
+    document.querySelector(".repos-group").innerHTML = "";
   }
 
   //show alert pass the methos a messgae and a class name
