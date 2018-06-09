@@ -7,12 +7,16 @@ class UI {
     const outputUser = `
     <div class="container">
     <div class="row">
+    <div class="col-md-12">
+    <h1 class="name">${user.name}</h1>
+    </div>
+  </div>
+    <div class="row">
       <div class="col-md-4">
-        <h1 class="name mt-3">${user.name}</h1>
         <img src="${user.avatar_url}" alt="" class="img-fluid rounded">
       </div>
-      <div class="col-md-8 mt-5">
-        <ul class="list-group mt-5">
+      <div class="col-md-8">
+        <ul class="list-group">
           <li class="list-group-item d-flex justify-content-between align-items-center">
             Repository :
             <span class="badge badge-primary badge-pill">${user.public_repos}</span>
@@ -87,9 +91,9 @@ class UI {
     //loop arrray for the repository group
     repos.forEach(function (a) {
       resOutPut += `<div class="single">
-  <div class="left">${a.name}</div>
-  <div class="center">${a.language}</div>
-  <div class="right"><a href="${a.html_url} target="_blank">Repository Link</a></div>
+  <div class="item">${a.name}</div>
+  <div class="item">${a.language}</div>
+  <div class="item"><a href="${a.html_url} target="_blank">Repository Link</a></div>
 </div>`
     })
 

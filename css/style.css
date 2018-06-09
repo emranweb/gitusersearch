@@ -11,66 +11,79 @@ body {
   position: relative;
 }
 
+.user h1 {
+  font-size: 50px;
+  margin: 20px 0px;
+}
+
 .list-group-item {
-  font-size: 20px;
-}
-
-.single {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 10px;
-  border: 1px solid #dfdfdf;
-  margin-top: 10px;
-  border-radius: 3px;
-  font-size: 20px;
-}
-
-@media only screen and (max-width:800px) {
-  .list-group-item {
-    font-size: 16px;
-  }
-  .single {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 16px;
-  }
-  .center {
-    margin: 10px 0px;
-  }
+  font-size: 17px;
 }
 
 .repository {
   padding-bottom: 50px;
 }
 
+.single {
+  display: flex;
+  border: 1px solid #dfdfdf;
+  justify-content: space-between;
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.item {
+  flex-grow: 1;
+  width: 33%;
+}
+
+.item:nth-child(2) {
+  text-align: center;
+}
+
+.item:last-child {
+  text-align: right;
+}
+
 footer {
   font-weight: bold;
-  left: 50%;
-  -webkit
-  -transform: translateX(-50%);
-  transform: translateX(-50%);
-  position: absolute;
-  bottom: 0;
-  /* Height of the footer */
 }
 
 footer span {
   color: #ee6464;
   margin: 0px 5px;
+  font-weight: bold;
 }
 
 footer a {
   color: #ee6464;
+}
+
+@media only screen and (max-width:767px) {
+  .list-group-item {
+    font-size: 20px;
+  }
+  .single {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center
+  }
+  .item {
+    width: 100%;
+  }
+  .item:last-child {
+    text-align: center;
+  }
+  .list-group-item {
+    font-size: 16px;
+  }
+  .list-group {
+    margin-top: 20px;
+  }
+  .user h1 {
+    font-size: 30px;
+  }
 }
